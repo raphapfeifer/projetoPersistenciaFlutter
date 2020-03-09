@@ -12,10 +12,23 @@ class BytebankApp extends StatelessWidget {
         accentColor: Colors.blueAccent[700],
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('DashBoard'),
-        ),
-      ),
+          appBar: AppBar(
+            title: Text('DashBoard'),
+          ),
+          body: Column(
+            children: <Widget>[
+              Image.asset('images/bytebank_logo.png'),
+              Container(
+                color: Colors.green,
+                child: Column(
+                  children: <Widget>[
+                    Icon(Icons.people),
+                    Text('Contacts')
+                  ],
+                ),
+              )
+            ],
+          )),
     );
   }
 }
