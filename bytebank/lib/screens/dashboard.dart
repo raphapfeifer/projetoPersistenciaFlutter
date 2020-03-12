@@ -1,12 +1,15 @@
 import 'package:bytebank/screens/contacts_list.dart';
 import 'package:flutter/material.dart';
 
+const _tituloAppBar = 'DashBoard';
+const _tituloContainer = 'Contacts';
+
 class DashBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('DashBoard'),
+          title: Text(_tituloAppBar),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -41,7 +44,7 @@ class DashBoard extends StatelessWidget {
                           color: Colors.white,
                           size: 24.0,
                         ),
-                        Text('Contacts',
+                        Text(_tituloContainer,
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16.0,
