@@ -1,4 +1,5 @@
 import 'package:bytebank/screens/contacts_list.dart';
+import 'package:bytebank/screens/transactions_list.dart';
 import 'package:flutter/material.dart';
 import 'package:bytebank/resources/constants.dart' as Constants;
 
@@ -33,7 +34,7 @@ class DashBoard extends StatelessWidget {
                     _FeatureItem(
                       Constants.TITULO_TRANSACTION_FEED,
                       Icons.description,
-                      onClick: () => debugPrint('Transaction Fedd was clicked'),
+                      onClick: () => _showTransactionsList(context)
                     ),
                   ],
                 ),
@@ -41,6 +42,14 @@ class DashBoard extends StatelessWidget {
             ],
           ),
         ));
+  }
+
+  _showTransactionsList(BuildContext context) {
+    Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => TransactionsList(),
+        )
+    );
   }
 }
 
