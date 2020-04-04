@@ -45,7 +45,7 @@ class _ContactsListState extends State<ContactsList> {
               );
               break;
           }
-          return Text('Unknow Error');
+          return Text(Constants.UNKNOW_ERROR);
 
         },
       ),
