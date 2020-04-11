@@ -1,13 +1,15 @@
 
 import 'package:bytebank/components/centered_message.dart';
 import 'package:bytebank/components/progress.dart';
-import 'package:bytebank/http/webclient.dart';
+import 'package:bytebank/http/webclients/transaction_webclient.dart';
 import 'package:bytebank/models/Transaction.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:bytebank/resources/constants.dart' as Constants;
 
 class TransactionsList extends StatelessWidget {
+
+  final TransactionWebClient _webClient = TransactionWebClient();
 
 
   @override
@@ -17,7 +19,7 @@ class TransactionsList extends StatelessWidget {
         title: Text(Constants.TITULO_TRANSACTION_FEED),
       ),
       body: FutureBuilder<List<Transaction>>(
-        future: findAll(),
+        future: _webClient.findAll(),
         builder:(context,snapshot){
 
           switch(snapshot.connectionState){
