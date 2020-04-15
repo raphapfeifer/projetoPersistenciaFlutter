@@ -2,6 +2,7 @@ import 'package:bytebank/http/webclient.dart';
 import 'package:bytebank/screens/dashboard.dart';
 import 'package:flutter/material.dart';
 
+import 'components/transaction_auth_dialog.dart';
 import 'models/Contact.dart';
 import 'models/Transaction.dart';
 
@@ -22,7 +23,7 @@ class BytebankApp extends StatelessWidget {
           textTheme: ButtonTextTheme.primary,
         )
       ),
-      home: DashBoard(),
+      home: TransactionAuthDialog(),
     );
   }
 }
